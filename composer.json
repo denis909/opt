@@ -1,0 +1,12 @@
+{
+    "name": "denis909/opt",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Denis909\\Opt\\": ""
+        }
+    },
+    "require": {
+        "psr/log": "^1.1"
+    }
+}
