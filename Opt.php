@@ -18,27 +18,21 @@ class Opt
         $this->_long = $long;
     }
 
-    public function addShort(array $opt)
+    public function addShort(array $short)
     {
-        foreach($opt as $key)
-        {
-            if (array_search($key, $this->_short) === false)
-            {
-                $this->_short = $key;
-            }
-        }
+        $this->_short .= $short; 
     }
 
-    public function addLong(array $opt)
+    public function addLong(array $long)
     {
-        foreach($opt as $key)
+        foreach($long as $key)
         {
             if (array_search($key, $this->_long) === false)
             {
-                $this->_long = $key;
+                $this->_long[] = $key;
             }
         }
-    }    
+    }
 
     public function getOpt()
     {
